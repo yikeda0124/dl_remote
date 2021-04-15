@@ -2,7 +2,7 @@
 
 PROJECT_NAME=dl_remote
 CONTAINER_NAME=yikeda_${PROJECT_NAME}
-IMAGE_NAME=matsuolab/${PROJECT_NAME}
+IMAGE_NAME=${PROJECT_NAME}
 TAG_NAME=latest
 
 docker run -it --rm \
