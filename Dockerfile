@@ -106,6 +106,8 @@ RUN apt-get update && apt-get install -y \
 RUN source /root/.zshrc && \
     pip install setuptools jupyterlab && \
     pip install tensorflow && \
+    pip install matplotlib && \
+    pip install tdqm && \
     pip install pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html && \
     echo 'alias jl="DISPLAY=:0 jupyter lab --ip 0.0.0.0 --port 8888 --allow-root &"' >> /root/.zshrc && \
     echo 'alias tb="tensorboard --logdir runs --bind_all &"' >> /root/.zshrc
@@ -118,6 +120,5 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY start.sh /root/
 WORKDIR /root
 CMD ["zsh"]
