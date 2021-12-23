@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PROJECT_NAME=dl_remote
-CONTAINER_NAME=yikeda_${PROJECT_NAME}
+CONTAINER_NAME=ouyou_${PROJECT_NAME}
 IMAGE_NAME=${PROJECT_NAME}
 TAG_NAME=latest
 
