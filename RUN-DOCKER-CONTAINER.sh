@@ -6,9 +6,7 @@ IMAGE_NAME=${PROJECT_NAME}
 TAG_NAME=latest
 
 docker run -it --rm \
-    --gpus all \
-    -p 5900:5900 \
-    -p 8888:8888 \
+    -p 5910:5900 \
     -e DISPLAY=:0\
     -v ${PWD}/work:/root/work \
     --name ${CONTAINER_NAME} \
